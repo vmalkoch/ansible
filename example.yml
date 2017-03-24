@@ -1,0 +1,6 @@
+- name: install cmtarix
+  hosts: webservers
+  sudo: True
+  tasks: 
+   - name: install cmatrix
+     apt: name=cmatrix update_cache=yes
