@@ -6,14 +6,14 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 
-Vagrant.configure(2) do |config|
+#-Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty32"
+#-  config.vm.box = "ubuntu/trusty32"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -23,8 +23,8 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 443, host: 8443
+ #- config.vm.network "forwarded_port", guest: 80, host: 8080
+ #- config.vm.network "forwarded_port", guest: 443, host: 8443
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -50,11 +50,11 @@ Vagrant.configure(2) do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-       vb.memory = "512"
-       vb.customize ["modifyvm", :id, "--nictype1", "virtio"]
-       vb.customize ["modifyvm", :id, "--nictype2", "virtio"]
-       config.vm.boot_timeout = 300
-      end
+  #-    vb.memory = "512"
+  #-   vb.customize ["modifyvm", :id, "--nictype1", "virtio"]
+  #-     vb.customize ["modifyvm", :id, "--nictype2", "virtio"]
+  #-     config.vm.boot_timeout = 300
+  #-    end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -73,4 +73,4 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-end
+#-end
