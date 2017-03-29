@@ -1,0 +1,15 @@
+---
+- name: show author publisher and title
+  hosts: vagrant1
+  tasks: 
+    - name: print ansible_local
+      debug: var=ansible_local
+
+    - name: print book title
+      debug: msg="The title of the book is {{ ansible_local.example.book.title }}"
+
+    - name: print pesho's stuff
+      debug: >
+           msg="The oli's location and occupation {{ ansible_local.try.person.location }}
+           {{ ansible_local.try.person.occupation }}" 
+     
