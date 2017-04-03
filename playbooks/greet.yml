@@ -1,0 +1,13 @@
+---
+ - name: pass a message on the command line
+   hosts: localhost
+   vars: 
+     greeting: "you didn't specify a message"
+   tasks: 
+     - name: output a message
+       debug: msg="{{ greeting }}"
+
+     - name: ifconfig 
+       debug: msg="{{ ansible_enp0s3.ipv4.address }}"
+
+

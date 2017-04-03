@@ -13,3 +13,8 @@
            msg="The oli's location and occupation {{ ansible_local.try.person.location }}
            {{ ansible_local.try.person.occupation }}" 
      
+    - name: show variables
+      debug: msg="{{ ansible_eth0.ipv4.address }}"
+
+    - name: show other vars
+      debug: var=hostvars[vagrant1] 
